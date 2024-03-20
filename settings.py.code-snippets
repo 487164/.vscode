@@ -13,7 +13,7 @@
 	// 	"description": "Log output to console"
 	// }
 
-	"Python esP Script": {
+	"esP Python Script": {
 		"prefix": "esPPy",
 		"isFileTemplate": true,
 		"body": [

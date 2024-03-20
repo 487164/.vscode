@@ -15,7 +15,7 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"Print to console": {
+	"esP Configuration File": {
 	 	"prefix": "esPConf",
 		"isFileTemplate": true,
 	 	"body": [

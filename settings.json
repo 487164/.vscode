@@ -1,5 +1,4 @@
 {
-    "python.analysis.autoImportCompletions": true,
     "python.analysis.extraPaths": [
         "./Security-monitoring/lib/esPublicoLogger"
     ],
@@ -19,9 +18,9 @@
         */
     ],
     "editor.formatOnPaste": true,
-    //"editor.formatOnSave": true,
+    "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "modifications",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "files.eol": "\r\n",
+    "files.eol": "\n", // Unix EOL https://en.wikipedia.org/wiki/Newline#Representation
 }
