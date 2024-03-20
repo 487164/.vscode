@@ -1,7 +1,27 @@
 {
     "python.analysis.autoImportCompletions": true,
-    "problems.decorations.enabled": false,
     "python.analysis.extraPaths": [
         "./Security-monitoring/lib/esPublicoLogger"
-    ]
+    ],
+    // Formatting according to PEP8 (https://peps.python.org/pep-0008/)
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "autopep8.args": [
+        "--ignore=E201,E202,E211,E221,E222,E266,E401",
+        // PEP8 Error Codes: https://pycodestyle.pycqa.org/en/latest/intro.html#error-codes
+        /*
+        E201: whitespace after  (
+        E202: whitespace before )
+        E211: whitespace before (
+        E221: multiple spaces before operator
+        E222: multiple spaces after  operator
+        E266: too many leading # for block comment
+        E401: multiple imports on one line
+        */
+    ],
+    "editor.formatOnPaste": true,
+    //"editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.eol": "\r\n",
 }
