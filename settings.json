@@ -1,0 +1,7 @@
+{
+    "python.analysis.autoImportCompletions": true,
+    "problems.decorations.enabled": false,
+    "python.analysis.extraPaths": [
+        "./Security-monitoring/lib/esPublicoLogger"
+    ]
+}
