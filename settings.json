@@ -3,7 +3,10 @@
         "./Security-monitoring/lib/esPublicoLogger"
     ],
     // Formatting according to PEP8 (https://peps.python.org/pep-0008/)
-    "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.defaultFormatter": "ms-python.autopep8", // At now, run with Alt+Shift+F
+    /* "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "modifications", */
     "autopep8.args": [
         "--ignore=E201,E202,E211,E221,E222,E266,E401",
         // PEP8 Error Codes: https://pycodestyle.pycqa.org/en/latest/intro.html#error-codes
@@ -17,9 +20,6 @@
         E401: multiple imports on one line
         */
     ],
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "modifications",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.eol": "\n", // Unix EOL https://en.wikipedia.org/wiki/Newline#Representation

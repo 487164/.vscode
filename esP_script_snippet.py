@@ -13,7 +13,6 @@ from datetime import datetime, timedelta
 from time import time, sleep
 
 # getting config
-
 config_file = "sample.conf"
 config      = configparser.ConfigParser()
 config.read(config_file)
@@ -44,7 +43,7 @@ log_file  = config.get("files", "logfile")
 logfile   = log_path + log_file
 
 
-### argparser
+#### Argparser
 def cmdArguments():
     """ Main entry point of the app """
     # check if argv isn't empty
@@ -88,15 +87,54 @@ def cmdArguments():
     return args
 
 
-#### main
+#### Utils
+
+## read file
+def read_txt_file(filename):
+    data = ""
+    with open(filename, 'r') as f:
+        data = f.read()
+    return data
+
+
+## create file
+def check_file_exists(filename):
+    if not os.path.isfile(filename):
+        open(filename, "w").close()
+
+
+## write to file
+def write_txt_file(filename, data):
+    with open(filename, "w") as f:
+        f.write(data)
+
+
+#### Main
+
 def run():
     """ Main entry point of the app """
-    print("hello world")
+
+    ## get start time
+    apiStart = time()
+
+    ## start process
+    logger.do_logs("info", {"message": "Starting process..."})
+
+    # TODO: call all the main features from here,
+    #       as they should be written as functions
+
+    ## get final time
+    apiEnd = time()
+
+    ## calculate scan total time
+    ctime = apiEnd - apiStart
+    logger.do_logs("info", {"message": "Process complete in %s seconds" % (
+        ctime), "execution_time": str(ctime)})
 
 
 if __name__ == "__main__":
     try:
-        # check arguments
+        ## check arguments
         args = cmdArguments()
     except Exception as e:
         print(e)
@@ -104,13 +142,13 @@ if __name__ == "__main__":
     try:
         result = 0
 
-        # create logger
+        ## create logger
         level = "INFO" if not args.verbose else "DEBUG"
         logger = esPublicoLogger.Logger(
             NAME, logfile, level, args.quiet, syslog_logger, syslog_facility)
         logger.create_logger()
 
-        # and run application
+        ## and run application
         run()
     except SystemExit as e:
         result = e
