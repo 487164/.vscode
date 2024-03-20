@@ -92,7 +92,7 @@
 "",
 "    for i in range(len(argv)):",
 "        if args.version:",
-"            print(\"%s\nVersion: %s\nAuthor: %s\" %(NAME, __version__, __author__))",
+"            print(\"%s\\nVersion: %s\\nAuthor: %s\" %(NAME, __version__, __author__))",
 "            raise SystemExit",
 "",
 "    #TODO: check args here:",
