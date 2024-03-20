@@ -89,7 +89,7 @@ def cmdArguments():
 
 
 #### main
-def run(filename):
+def run():
     """ Main entry point of the app """
     print("hello world")
 
