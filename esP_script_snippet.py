@@ -27,11 +27,6 @@ __date__    = '2000-12-31'
 ## default options
 CONFIG_VAR  = config.get("sample", "CONFIG_VAR")
 
-log_data = {
-    "action": "",
-    "type": "",
-    "message": ""
-}
 syslog_logger   = config.get("syslog", "syslog_enable")
 syslog_facility = config.get("syslog", "syslog_facility")
 syslog_priority = config.get("syslog", "syslog_priority")
