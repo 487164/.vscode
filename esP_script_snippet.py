@@ -25,7 +25,7 @@ __version__ = '0.1.0'
 __date__    = '2000-12-31'
 
 ## default options
-CONFIG_VAR  = config.get("sample", 'CONFIG_VAR')
+CONFIG_VAR  = config.get("sample", "CONFIG_VAR")
 
 log_data = {
     "action": "",
@@ -44,7 +44,7 @@ logfile   = log_path + log_file
 
 
 #### Argparser
-def cmdArguments():
+def cmdArguments(argv=None):
     """ Main entry point of the app """
     # check if argv isn't empty
     if not argv:
