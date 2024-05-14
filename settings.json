@@ -1,13 +1,10 @@
 {
-    "python.analysis.extraPaths": [
-        "./Security-monitoring/lib/esPublicoLogger"
-    ],
     // Formatting according to PEP8 (https://peps.python.org/pep-0008/)
     "editor.defaultFormatter": "ms-python.autopep8", // At now, run with Alt+Shift+F
-    /* "editor.formatOnPaste": true,
-        "editor.formatOnSave": true,
-        "editor.formatOnSaveMode": "modifications", */
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications",
     "autopep8.args": [
+        "--max-line-length=120",
         "--ignore=E201,E202,E211,E221,E222,E266,E401",
         // PEP8 Error Codes: https://pycodestyle.pycqa.org/en/latest/intro.html#error-codes
         /*
