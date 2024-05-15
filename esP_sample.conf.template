@@ -1,14 +1,12 @@
-[sample]
-CONFIG_VAR      = 0
-
 [syslog]
 syslog_enable   = False
 syslog_facility = local6
 syslog_priority = info
 
 [paths]
-logpath = ./
-tmppath = ./
+logpath   =
+inputpath =
 
 [files]
-logfile       = sample.log
+inputfile = 
+logfile   = sample.log
